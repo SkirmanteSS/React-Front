@@ -1,10 +1,13 @@
 import React, {useState } from 'react';
+import validation from './validation';
 
 const SignupForm =  () => {
     const [values, setValues] = useState({
         email: '',
         password: '',
     });
+
+    const [errors, setErrors] = useState({});
 
     const handleChange = (event) => {
         setValues({
@@ -25,11 +28,21 @@ const SignupForm =  () => {
                 <form className='form-wrapper'>
                     <div className='name'>
                         <label className='label'> EMail </label>
-                        <input className='input' type='email' name='email'/>
+                        <input className='input' 
+                        type='email' 
+                        name='email' 
+                        value={values.email}
+                        onChange={handleChange}
+                        />
                     </div>
                     <div className='password'>
                         <label className='label'> Password </label>
-                        <input className='input' type='password' name='password'/>
+                        <input className='input' 
+                        type='password' 
+                        name='password' 
+                        value={values.password}
+                        onChange={handleChange}
+                        />
 
                     </div>
                     <div>
@@ -42,6 +55,6 @@ const SignupForm =  () => {
 
         </div>
     )
-}
+};
 
-export default SignupForm
+export default SignupForm;
