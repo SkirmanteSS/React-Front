@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, HeroSection, HeroText, ButtonWrapper, HeroButton, Container, MainHeading } from '../../globalStyles';
+import { Button, Container, MainHeading } from '../../globalStyles';
+import { HeroSection, HeroText, HeroButton, ButtonWrapper } from './heroStyles';
 
 
 const Hero = () => {

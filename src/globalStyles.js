@@ -3,9 +3,9 @@ import styled, { createGlobalStyle } from 'styled-components';
 const GlobalStyle =  createGlobalStyle`
 *{
     box-sizing: border-box;
-margin: 0;
-padding: 0;
-font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 `;
 
@@ -43,7 +43,7 @@ export const Button = styled.button`
     border-radius: 4px;
     background: none;
     white-space: nowrap;
-    padding: 10 20px;
+    padding: 10px 20px;
     font-size: 16px;
     color: #fff;
     outline: none;
