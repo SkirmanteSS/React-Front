@@ -7,6 +7,7 @@ import  Register  from './pages/Register';
 import  Login  from './pages/Login';
 import  Add  from './pages/Add';
 import  NoMatch  from './pages/NoMatch';
+import  Form  from './components/Form/form';
 
 function App() {
 

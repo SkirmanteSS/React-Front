@@ -1,24 +1,11 @@
-import React, {useState } from 'react';
-import validation from './validation';
+import React from 'react';
+import useForm from './useForm';
 
-const SignupForm =  () => {
-    const [values, setValues] = useState({
-        email: '',
-        password: '',
-    });
-
-    const [errors, setErrors] = useState({});
-
-    const handleChange = (event) => {
-        setValues({
-            ...values,
-            [event.target.name]: event.target.value,
-        });
-    };
+const SignupForm =  ({submitForm}) => {
     
-    const handleFormSubmit = (event) => {
-        event.preventDefault();
-    };
+    const {handleChange, handleFormSubmit, values, errors} = useForm(
+        submitForm
+        );
     return (
         <div className='container'>
             <div className='app=wrapper'>
@@ -34,6 +21,7 @@ const SignupForm =  () => {
                         value={values.email}
                         onChange={handleChange}
                         />
+                        {errors.email && <p className='error'>{errors.email}</p>}
                     </div>
                     <div className='password'>
                         <label className='label'> Password </label>
@@ -43,7 +31,7 @@ const SignupForm =  () => {
                         value={values.password}
                         onChange={handleChange}
                         />
-
+                        {errors.email && <p className='error'>{errors.email}</p>}
                     </div>
                     <div>
                         <button className='submit' onClick={handleFormSubmit}>
